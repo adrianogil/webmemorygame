@@ -31,11 +31,11 @@ function createCard(imageUrl) {
     card.classList.add('card');
     card.dataset.image = imageUrl;
 
-    // Back face (Placeholder)
+    // Back face (Placeholder Gradient)
     const backFace = document.createElement('div');
     backFace.classList.add('back');
 
-    // Front face (Actual Image)
+    // Front face (Uploaded Image)
     const frontFace = document.createElement('img');
     frontFace.src = imageUrl;
     frontFace.classList.add('front');

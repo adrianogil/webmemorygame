@@ -79,8 +79,8 @@ input[type="file"]::-webkit-file-upload-button:hover {
 }
 /* styles.css */
 .card {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Increased size slightly for better image visibility */
+    height: 120px;
     background: white;
     border-radius: 10px;
     display: flex;
@@ -99,17 +99,21 @@ input[type="file"]::-webkit-file-upload-button:hover {
 }
 
 .card img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits within card while maintaining aspect ratio */
+    border-radius: 10px; /* Adds rounded corners matching the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for better contrast */
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
 }
 
+
 .card .back {
-    transform: rotateY(0deg);
-    background: url('/path/to/placeholder-image.png') center/cover no-repeat;
+    background: linear-gradient(45deg, #feb47b, #ff7e5f); /* Adds a stylish gradient for the card back */
+    border-radius: 10px;
 }
 
 .card .front {
